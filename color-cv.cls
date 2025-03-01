@@ -1,7 +1,8 @@
 % color-cv.cls
 %
-% Author: Wuqiong Zhao (me@wqzhao.org)
-% GitHub: https://github.com/Teddy-van-Jerry/color-cv
+% Author: Alessandro Cavaliere
+% GitHub: https://github.com/Alessandro-Cavaliere/Curriculum-Vitae-Alessandro-Cavaliere
+
 \NeedsTeXFormat {LaTeX2e}
 \RequirePackage {l3keys2e}
 \ProvidesExplClass {color-cv}
@@ -96,6 +97,9 @@
 \NewDocumentCommand \website { m } { \tl_set:Nn \l_color_cv_website_tl { #1 } }
 \NewDocumentCommand \websiteaux { m } { \tl_set:Nn \l_color_cv_websiteaux_tl { #1 } }
 \NewDocumentCommand \linkedin { m } { \tl_set:Nn \l_color_cv_linkedin_tl { #1 } }
+%% Setting Information
+\tl_new:N \l_color_cv_github_tl % Aggiungi questa linea
+\NewDocumentCommand \github { m } { \tl_set:Nn \l_color_cv_github_tl { #1 } } 
 \NewDocumentCommand \photo { m } { \tl_set:Nn \l_color_cv_photo_tl { #1 } }
 \NewDocumentCommand \brief { m } { \tl_set:Nn \l_color_cv_brief_tl { #1 } }
 
@@ -163,13 +167,22 @@
                 \url{\l_color_cv_websiteaux_tl}
               }
             }
+            \\
           \tl_if_empty:NF { \l_color_cv_linkedin_tl }
             {
               \color@cv@add@sepapator
               LinkedIn:~\href{https \c_colon_str //www.linkedin.com/in/\l_color_cv_linkedin_tl}{\texttt{in / \l_color_cv_linkedin_tl}}
             }
+
+            \tl_if_empty:NF { \l_color_cv_github_tl }
+              {
+                \color@cv@add@sepapator
+                GitHub:~\href{https \c_colon_str //github.com/\l_color_cv_github_tl}{\texttt{github.com/\l_color_cv_github_tl}}
+              }
           \vspace{10pt}
+          
         \end{center}
+        
       }
       {
         % with photo
@@ -204,6 +217,11 @@
               }
               \\
             }
+        \tl_if_empty:NF { \l_color_cv_github_tl }
+          {
+            \color@cv@add@sepapator
+            GitHub:~\href{https \c_colon_str //github.com/\l_color_cv_github_tl}{\texttt{github.com/\l_color_cv_github_tl}}
+          }
           \tl_if_empty:NF { \l_color_cv_linkedin_tl }
             {
               LinkedIn:~\href{https \c_colon_str //www.linkedin.com/in/\l_color_cv_linkedin_tl}{\texttt{in / \l_color_cv_linkedin_tl}}

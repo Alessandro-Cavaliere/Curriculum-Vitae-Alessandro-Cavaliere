@@ -16,8 +16,8 @@ Different header styles are available based on whether a photo is included.
     <th style="text-align:center;">Without Photo</th>
   </tr>
   <tr>
-    <td style="text-align:center;" width=50%><img src="demo/w-photo.png" alt="With Photo"></td>
-    <td style="text-align:center;" width=50%><img src="demo/wo-photo.png" alt="Without Photo"></td>
+    <td style="text-align:center;" width=50%><img src="demo/CV-With-Photo.jpg" alt="With Photo"></td>
+    <td style="text-align:center;" width=50%><img src="demo/CV-Without-Photo.jpg" alt="Without Photo"></td>
   </tr>
 </table>
 
@@ -30,6 +30,8 @@ It can also work with XeLaTeX if you only use the font `libertine` (default) or 
 [`color-cv.tex`](color-cv.tex) is an example CV of [Wuqiong Zhao](https://wqzhao.org),
 which can be used as a template for your own CV.
 
+Thanks [Wuqiong Zhao](https://wqzhao.org) for this wonderful LaTeX template! 
+
 ### Contact Information
 The contact information can be optionally included in the CV, including:
 - Phone (`\phone`)
@@ -37,6 +39,8 @@ The contact information can be optionally included in the CV, including:
 - Website (`\website` and `\websiteaux` for a second website)
 - LinkedIn (`\linkedin`)
 - Photo (`\photo`)
+- GitHub (`\github`) -> I added a GitHub command. 
+
 
 You can also set a brief introduction about yourself using `\brief`.
 
